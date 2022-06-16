@@ -20,12 +20,14 @@
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="shortcut icon" href="img/banner-06.png" type="image/png"/>
+    <link rel="stylesheet" href="./css/font.css">
     <script
       defer
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
     <title>MOSTAFA NIAKAN</title>
     <style>
+      
       * {
         font-family: "Poppins", sans-serif;
         text-align: right;
@@ -105,7 +107,7 @@ z-index: 99;
   
 }
 .btn-Send:hover i{
-  margin-left: 20px;
+  margin-right: 20px;
 }
 .cd-headline.clip .cd-words-wrapper::after {
   left: 0;
@@ -141,7 +143,7 @@ z-index: 99;
                   :class="[activeTab == 0 ? 'text-rose-500' : 'text-navbarLi']"
                   class="fa-solid fa-house-user"
                   aria-hidden="true"
-                  ><a href="#home">HOME</a></i
+                  ><a href="#home">خانه</a></i
                 >
               </li>
 
@@ -152,7 +154,7 @@ z-index: 99;
                 <i
                   :class="[activeTab == 1 ? 'text-rose-500' : 'text-navbarLi']"
                   class="fa-solid fa-people-group"
-                  ><a href="#resume">RESUME</a></i
+                  ><a href="#resume">رزومه</a></i
                 >
               </li>
               <li x-on:click="activeTab=2" x-bind:class="{activeTab = 2}"
@@ -161,7 +163,7 @@ z-index: 99;
                 <i
                   :class="[activeTab == 2 ? 'text-rose-500' : 'text-navbarLi']"
                   class="fa-solid fa-arrow-trend-up"
-                  ><a href="#PORTFOLIO">PORTFOLIO</a></i
+                  ><a href="#PORTFOLIO">نمونه کار</a></i
                 >
               </li>
 
@@ -169,7 +171,7 @@ z-index: 99;
                 <i
                   :class="[activeTab == 3 ? 'text-rose-500' : 'text-navbarLi']"
                   class="fa-solid fa-briefcase"
-                  ><a href="#">Partners</a></i
+                  ><a href="#">همکاران</a></i
                 >
               </li>
 
@@ -181,14 +183,14 @@ z-index: 99;
                 <i
                   :class="[activeTab == 4 ? 'text-rose-500' : 'text-navbarLi']"
                   class="fa-solid fa-comment-dots"
-                  ><a href="#Contact">CONTACT</a></i
+                  ><a href="#Contact">تماس با من</a></i
                 >
               </li>
             </ul>
-            <div x-text="handleScroll"></div>
+          
           </div>
           <div  class=" px-4">
-<h2 class="font-bold mb-3">FIND WITH ME</h2>
+<h2 class="font-bold mb-3">چطور منو پیدا کنید</h2>
             <div class="flex flex-row ">
               <a href="https://www.instagram.com/niakan_mostafa/" class="transition ease-in-out delay-100  hover:-translate-y-2 
                duration-150  bg-gradient-to-r  from-white to-shadowColor shadow-4x1  rounded-lg p-5 text-lg
@@ -236,24 +238,25 @@ z-index: 99;
                 alt=""
               />
             </div>
-            <div class="mt-5">
-              <h1   class="text-4xl font-bold">Mostafa Niakan</h1>
-              <div class="text-2xl mt-5 flex flex-row-reverse">
-                <h2 class="ml-2">من هستم</h2>
-                <h3 class="cd-headline clip">
-                  <span class="cd-words-wrapper text-btnColor">
-                    <b class="is-visible ">برنامه نویس وب</b>
-                    <b>Front-End  
-                    </b>
-                    
-                  </span>
-                </h3>
-              </div>
+            <div class="mt-5  ">
+          <div class="w-72 mr-24">
+            <h1   class="text-4xl font-bold">مصطفی نیاکان</h1>
+            <div class="text-2xl mt-5 flex flex-row-reverse">
+              <h2 class="ml-2">من هستم</h2>
+              <h3 class="cd-headline clip">
+                <span class="cd-words-wrapper text-btnColor">
+                  <b class="is-visible ">برنامه نویس</b>
+                  <b> برنامه نویس وب</b>
+                  
+                </span>
+              </h3>
+            </div>
+          </div>
               <div class="mt-8 bg-btnHeader w-fit m-auto transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-105  duration-300">
                 <a href="#Contact"
                   class="shadow-4x1  py-4 px-9 text-sm font-medium text-btnColor hover:text-white bg-gradient-to-r from-shadowColor to-white hover:from-btnColor hover:to-GradientBtn cursor-pointer rounded duration-700 ease-in-out"
                 >
-                  CONTACT ME
+                  تماس بامن
                 </a>
               </div>
             </div>
@@ -261,11 +264,11 @@ z-index: 99;
         <div class="" id="resume">
           <div class="mt-10  items-center flex flex-col border-t-4" >
             <div class="mt-5 w-full flex flex-col items-center">
-              <h2 class="text-4xl font-bold">My Resume</h2>
+              <h2 class="text-4xl font-bold">رزومه من</h2>
               <div class="w-full ">
                 <ul class="flex flex-row w-full items-center  justify-evenly">
-                  <li x-on:click="Tabsactive =0"  class="hover:shadow-4x1 lg:w-56 w-40  py-6 lg:px-9 px-5 font-bold lg:text-sm text-0.5   text-black hover:text-btnColor bg-gradient-to-r from-shadowColor to-white   cursor-pointer rounded duration-600 ease-in-out">About Me</li>
-                  <li x-on:click="Tabsactive =1" class="hover:shadow-4x1 lg:w-56 w-40  py-6 lg:px-9 px-5 font-bold lg:text-sm text-0.5   text-black hover:text-btnColor bg-gradient-to-r from-shadowColor to-white   cursor-pointer rounded duration-600 ease-in-out">professional Skills</li>
+                  <li x-on:click="Tabsactive =0"  class="hover:shadow-4x1 lg:w-56 w-40  py-6 lg:px-9 px-5 font-bold lg:text-sm text-0.5   text-black hover:text-btnColor bg-gradient-to-r from-shadowColor to-white   cursor-pointer rounded duration-600 ease-in-out">درباره من</li>
+                  <li x-on:click="Tabsactive =1" class="hover:shadow-4x1 lg:w-56 w-40  py-6 lg:px-9 px-5 font-bold lg:text-sm text-0.5   text-black hover:text-btnColor bg-gradient-to-r from-shadowColor to-white   cursor-pointer rounded duration-600 ease-in-out">مهارت ها</li>
                 </ul>
                
               </div>
@@ -289,18 +292,18 @@ z-index: 99;
 
                     <div  class="p-8  duration-700 ease-in-out  overflow-hidden hover:py-1">
                       <div class="border-b-2 border-borderColor pb-5">
-                        <i class="fa-solid fa-graduation-cap text-4xl mb-2"></i><h3  class="text-3xl font-semibold  ">High school</h3>
+                        <i class="fa-solid fa-graduation-cap text-4xl mb-2"></i><h3  class="text-3xl font-semibold  ">مدرسه</h3>
                       </div>
                      <div class="mt-3 flex md:flex-row flex-col justify-between ">
                       <div>
-                        <p class="mb-3 font-extrabold" >High School Name :</p>
-                        <P>Amir Kabir</P>
+                        <p class="mb-3 font-extrabold" >نام مدرسه :</p>
+                        <P>امیرکبیر</P>
                       </div>
                        <div>
                         <p class="mb-3 font-extrabold">
-                          Field of study : 
+                          رشته  : 
                          </p>
-                         <P>COMPUTER
+                         <P>کامپیوتر
                         </P>
                        </div>
                       
@@ -348,18 +351,18 @@ z-index: 99;
   
                       <div  class="p-8 duration-700 ease-in-out  overflow-hidden hover:py-1">
                         <div class="border-b-2 border-borderColor pb-5">
-                          <i class="fa-solid fa-building-columns text-4xl mb-2"> </i><h3  class="text-3xl font-semibold   ">University</h3>
+                          <i class="fa-solid fa-building-columns text-4xl mb-2"> </i><h3  class="text-3xl font-semibold   ">دانشگاه</h3>
                         </div>
                        <div class="mt-3 flex md:flex-row flex-col justify-between">
                         <div>
-                          <p class="mb-3 font-extrabold">University Name :</p>
-                          <P>Semnan Technical</P>
+                          <p class="mb-3 font-extrabold">نام دانشگاه :</p>
+                          <P>دانشگاه فنی سمنان</P>
                         </div>
                        <div class="mb-3">
                         <p class="mb-3 font-extrabold ">
-                          Field of study : 
+                          رشته : 
                          </p>
-                         <P>software engineer
+                         <P>نرم افزار
   
                         </P>
                         
@@ -393,8 +396,8 @@ z-index: 99;
 
                 <div class="p-3 mt-6">
                   <div >
-                    <span class="text-btnColor text-sm">Features</span>
-                    <h2 class="text-3xl font-bold">Development Skill</h2>
+                    <span class="text-btnColor text-sm">امکانات</span>
+                    <h2 class="text-3xl font-bold">مهارت توسعه</h2>
                   </div>
                   <div class="h-80 mt-5  border-borderColor">
                     <div class="mb-5 text-Progress font-medium">
@@ -466,8 +469,8 @@ z-index: 99;
 
                 <div class="p-3 mt-6"  >
                   <div>
-                    <span class="text-btnColor text-sm">Features</span>
-                    <h2 class="text-3xl font-bold">Design Skill</h2>
+                    <span class="text-btnColor text-sm">امکانات</span>
+                    <h2 class="text-3xl font-bold">مهارت طراحی</h2>
                   </div>
                   <div class="h-80 mt-5  border-borderColor">
                     <div class="mb-5 text-Progress font-medium">
@@ -516,18 +519,18 @@ z-index: 99;
         <div class=" items-center flex flex-col border-t-4 p-8" id="PORTFOLIO">
         
 <div class="mt-5 w-full flex flex-col items-center"  @scroll.window.throttle="handleScroll =false">
-  <span class="text-btnColor">VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK</span>
-  <h2 class="text-4xl font-bold">My Portfolio</h2>
+  <span class="text-btnColor">از نمونه کارها من دیدن کنید</span>
+  <h2 class="text-4xl font-bold">نمونه کارها من</h2>
 </div>
 <div class="grid  lg:grid-cols-3 grid-cols-1 gap-4 w-full mt-10">
 <div class=" w-full lg:h-96  shadow-4x1  p-6">
   <div class="overflow-hidden rounded  cursor-pointer"><img class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300" src="img/portfolio-01.jpg" alt=""></div>
   <div class="my-3 text-sm">
-    <span class="text-btnColor">DEVELOPMENT</span>
+    <span class="text-btnColor">توسعه</span>
   </div>
   <div >
   <h4  x-on:click="moda = !moda" class="text-2xl hover:text-btnColor cursor-pointer font-bold arrow">
-    <a >The services provide for design
+    <a >خدمات برای طراحی ارائه می شود
       <i class="fa-solid fa-arrow-trend-up "></i>
     </a>
   </h4>
@@ -541,11 +544,11 @@ z-index: 99;
 <div class=" w-full lg:h-96  shadow-4x1  p-6">
   <div class="overflow-hidden rounded  cursor-pointer"><img class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300" src="img/portfolio-01.jpg" alt=""></div>
   <div class="my-3 text-sm">
-    <span class="text-btnColor">DEVELOPMENT</span>
+    <span class="text-btnColor">توسعه</span>
   </div>
   <div >
   <h4  x-on:click="moda = !moda" class="text-2xl hover:text-btnColor cursor-pointer font-bold arrow">
-    <a >The services provide for design
+    <a >خدمات برای طراحی ارائه می شود
       <i class="fa-solid fa-arrow-trend-up "></i>
     </a>
   </h4>
@@ -562,11 +565,11 @@ z-index: 99;
 <div class=" w-full lg:h-96  shadow-4x1  p-6" >
   <div class="overflow-hidden rounded  cursor-pointer"><img class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300" src="img/portfolio-01.jpg" alt=""></div>
   <div class="my-3 text-sm">
-    <span class="text-btnColor">DEVELOPMENT</span>
+    <span class="text-btnColor">توسعه</span>
   </div>
   <div >
   <h4  x-on:click="moda = !moda" class="text-2xl hover:text-btnColor cursor-pointer font-bold arrow">
-    <a >The services provide for design
+    <a >خدمات برای طراحی ارائه می شود
       <i class="fa-solid fa-arrow-trend-up "></i>
     </a>
   </h4>
@@ -582,8 +585,8 @@ z-index: 99;
         <div class="w-full  p-2 " id="Contact">
 
 <div class="text-center" >
-  <span class="my-5 text-btnColor">CONTACT</span>
-  <h2 class="text-6xl font-bold text-texttop">Contact With Me</h2>
+  <span class="my-5 text-btnColor">تماس با من</span>
+  <h2 class="text-6xl font-bold text-texttop">تماس با من</h2>
 </div>
 <div class="grid grid-rows-1 lg:grid-cols-2 gap-8 mt-10 ">
   <div class=" h-full flex flex-col  bg-gradient-to-r  from-white to-shadowColor shadow-4x1  rounded-lg">
@@ -593,28 +596,28 @@ z-index: 99;
     duration-300" src="img/contact1.png" alt="">
   </div>
   <div class="mt-10">
-    <h2 class="text-3xl font-bold text-black">Nevine Acotanza</h2>
-    <h3 class="my-5 text-lg">Chief Operating Officer</h3>
-    <span class="">I am available for freelance work. Connect with me via and call in to my account.</span>
+    <h2 class="text-3xl font-bold text-black">همکاری </h2>
+    <h3 class="my-5 text-lg">مدیر ارشد </h3>
+    <span class="">من برای همکاری آماده هستم . ازطریق راه های ارتباطی زیر بامن تماس بگیرد</span>
    <div class="my-5">
     <div class="my-3" >
-      <span> Number : </span>
+      <span class="ml-3"> شماره : </span>
       <a href="tel:09035441578" class="font-display    leading-tight hover:text-btnColor">
         <span class="link link-underline link-underline-black "> 09035441578 </span>
         </a>
     </div>
-    <div>
-      <span> Gmail : </span>
+    <div class="flex flex-row-reverse">
+      <span class="ml-3"> : ایمیل  </span>
       <a href="mailto:mostafaniakan96@gmail.com" class="font-display    leading-tight hover:text-btnColor">
-        <span class="link link-underline link-underline-black "> mostafaniakan96@gmail.com </span> </a>
+        <span class="link link-underline link-underline-black ">  mostafaniakan96@gmail.com </span> </a>
     </div>
 
    </div>
 
-   <div class="flex flex-row ">
+   <div class="flex flex-row-reverse  ">
     <a href="https://www.instagram.com/niakan_mostafa/" class="transition ease-in-out delay-100  hover:-translate-y-2 
      duration-150  bg-gradient-to-r  from-white to-shadowColor shadow-4x1  rounded-lg p-5 text-lg
-      hover:text-white cursor-pointer   hover:from-btnColor hover:to-GradientBtn mr-10"> <i class="fa-brands fa-instagram"></i></a>
+      hover:text-white cursor-pointer   hover:from-btnColor hover:to-GradientBtn ml-10"> <i class="fa-brands fa-instagram"></i></a>
     <a href="https://t.me/Mostafaniakan" class="transition ease-in-out delay-100  hover:-translate-y-2 
      duration-150 bg-gradient-to-r  from-white to-shadowColor shadow-4x1  rounded-lg p-5 text-lg
       hover:text-white cursor-pointer   hover:from-btnColor hover:to-GradientBtn "> <i class="fa-brands fa-telegram"></i> </a>
@@ -629,13 +632,13 @@ z-index: 99;
    <form>
     <div class="flex md:flex-row flex-col justify-between ">
       <div class="">
-        <label class="text-slate-600 after:content-['*'] after:ml-0.5 after:text-red-500" for="fname">YOUR NAME:</label><br>
+        <label class="text-slate-600 before:content-['*'] before:ml-0.5 before:text-red-500" for="fname">نام:</label><br>
         <input class=" my-3   rounded  shadow-sm  h-14 w-full 
         focus:outline-none  focus:ring-2 px-3 text-sm focus:ring-btnColor" type="text"/>
        </div>
        
        <div class="">
-        <label class="text-slate-600 after:content-['*'] after:ml-0.5 after:text-red-500" for="phone">PHONE NUMBER:</label><br>
+        <label class="text-slate-600 before:content-['*'] before:ml-0.5 before:text-red-500" for="phone">شماره:</label><br>
         <input class=" my-3  rounded-md text-sm shadow-sm w-full  h-14
         focus:outline-none focus:ring-btnColor focus:ring-2 px-3  "  type="tel">
         
@@ -643,17 +646,17 @@ z-index: 99;
     </div>
    <div>
     
-      <label class="text-slate-600 after:content-['*'] after:ml-0.5 after:text-red-500" for="Email">Email:</label>
+      <label class="text-slate-600 before:content-['*'] before:ml-0.5 before:text-red-500" for="Email">ایمیل:</label>
       <input type="email" class="peer  my-3  rounded-md text-sm shadow-sm w-full  h-14
       focus:outline-none focus:ring-btnColor focus:ring-2 px-3 "/>
       <p class=" invisible peer-invalid:visible text-pink-600 text-sm">
-        Please provide a valid email address.
+        لطفا یک آدرس ایمیل معتبر ارائه کنید
       </p>
     </label>
     
 
 
-    <label class="text-slate-600 after:content-['*'] after:ml-0.5 after:text-red-500" for="SUBJECT">SUBJECT:</label><br>
+    <label class="text-slate-600 before:content-['*'] before:ml-0.5 before:text-red-500" for="SUBJECT">موضوع:</label><br>
     <input class=" my-3  rounded-md text-sm shadow-sm w-full  h-14
     focus:outline-none focus:ring-btnColor focus:ring-2 px-3  "  type="text">
 
@@ -661,15 +664,16 @@ z-index: 99;
 
 
 
-    <label class="text-slate-600 after:content-['*'] after:ml-0.5 after:text-red-500" for="MESSAGE">YOUR MESSAGE:</label><br>
+    <label class="text-slate-600 before:content-['*'] before:mr-0.5 before:text-red-500" for="MESSAGE">پیام:</label><br>
     <textarea class=" my-3 p-3 rounded-md text-sm shadow-sm w-full  h-44
     focus:outline-none focus:ring-btnColor focus:ring-2 px-3 resize-none  " ></textarea>
    </div>
 
    <button class="w-full h-14 btn-Send bg-gradient-to-r text-btnColor hover:text-white from-white to-shadowColor  rounded-lg text-lg
-     cursor-pointer   hover:from-btnColor hover:to-GradientBtn "> 
-      SEND MESSAGE
-      <i class="fa-solid fa-arrow-trend-up "></i>
+     cursor-pointer   hover:from-btnColor hover:to-GradientBtn text-center "> 
+     <i class="fa-solid fa-arrow-trend-up "></i>
+      ارسال
+      
   </button>
    </form>
    
@@ -703,8 +707,8 @@ z-index: 99;
     </div>
     <div class=" lg:px-16 w-full  font-medium">
   <div class=" mb-6">
-    <span >Featured - Design</span>
-    <h2 class="lg:text-3xl text-xs mb-2 lg:mb-6 font-bold text-black mt-5">App Design Development.</h2>
+    <span >طراحی</span>
+    <h2 class="lg:text-3xl text-xs mb-2 lg:mb-6 font-bold text-black mt-5">توسعه طراحی اپلیکیشن</h2>
     <p class="mb-8 text-xs lg:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit.
        Cupiditate distinctio assumenda explicabo veniam temporibus eligendi.</p>
        <p class=" text-xs lg:text-lg">Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit 
