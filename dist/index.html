@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0"  />
+    <meta name="description" content="این یک توضیحات متای نمونه است. می توانیم تا 160 کاراکتر به آن اضافه کنیم">
+    <meta name="robots" content="index, follow">
+ 
+
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="img/banner-06.png" type="image/png"/>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <title>MOSTAFA NIAKAN</title>
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+        text-align: right;
+      }
+      li {
+        margin-top: 15px;
+        font-weight: 500;
+        display: flex;
+        justify-content: end;
+        flex-direction: row;
+      }
+      .activeLi {
+        color: #ff014f;
+        width: 30000px;
+      }
+
+      .navbar li i:hover {
+        color: #3c3e41;
+      }
+      .navbar li i a {
+        margin-right: 5px;
+      }
+      .navbar li i {
+        height: 20px;
+display: flex;
+flex-direction: row-reverse;
+       
+        margin-bottom: 5px;
+      }
+      h1 ,h2{
+        color: #3C3E41;
+      }
+
+      
+      #progress-bar {
+  --scrollAmount: 0%;
+  
+  background-image: linear-gradient(120deg, #ff014f 0%, #d11414 100%);
+  width: var(--scrollAmount);
+border-bottom-right-radius: 5px;
+z-index: 99;
+  height: 8px;
+  position: fixed;
+  top: 0;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.arrow a i {
+  opacity: 0;
+  transition: 0.1s;
+}
+.arrow:hover a i {
+  opacity: 1;
+}
+.link-underline {
+		border-bottom-width: 0;
+		background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+		background-size: 0 1.5px;
+		background-position: 0 100%;
+		background-repeat: no-repeat;
+		transition: background-size .5s ease-in-out;
+	}
+
+	.link-underline-black {
+		background-image: linear-gradient(transparent, transparent), linear-gradient(#d11414, #ff014f)
+	}
+
+	.link-underline:hover {
+		background-size: 100% 1.5px;
+		background-position: 0 100%
+	}
+  input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  
+}
+.btn-Send:hover i{
+  margin-left: 20px;
+}
+.cd-headline.clip .cd-words-wrapper::after {
+  left: 0;
+}
+    </style>
+  </head>
+  <body class="bg-main" x-data="{ Show:0,activeTab:0,Tabsactive:0 ,
+ moda:false,handleScroll:true,language:true
+  }"
+    x-init="activeTab()"
+    @scroll.window="activeTab()"
+  >
+  
+    <div id="progress-bar"></div>
+    <div class="absolute top-0">
+      <div class="flex flex-row" >
+        <header
+        
+          class="md:h-full shadow-4x1 z-10  fixed hidden md:block top-0 right-0 w-72 bg-main p-10 "
+        >
+        
+          <div class="p-2 bg-white rounded-full w-fit">
+            <img class="rounded-full" src="img/logo-06.png" alt="" />
+          </div>
+          <div
+           
+          >
+            <ul class="text-navbarLi mx-4 mt-14 mb-3 navbar" >
+              <li x-on:click="activeTab = 0 "   
+             
+              >
+                <i
+                  :class="[activeTab == 0 ? 'text-rose-500' : 'text-navbarLi']"
+                  class="fa-solid fa-house-user"
+                  aria-hidden="true"
+                  ><a href="#home">HOME</a></i
+                >
+              </li>
+
+              <li x-on:click="activeTab=1" x-bind:class="{activeTab = 1} "
+              
+              >
+              
+                <i
+                  :class="[activeTab == 1 ? 'text-rose-500' : 'text-navbarLi']"
+                  class="fa-solid fa-people-group"
+                  ><a href="#resume">RESUME</a></i
+                >
+              </li>
+              <li x-on:click="activeTab=2" x-bind:class="{activeTab = 2}"
+              
+               >
+                <i
+                  :class="[activeTab == 2 ? 'text-rose-500' : 'text-navbarLi']"
+                  class="fa-solid fa-arrow-trend-up"
+                  ><a href="#PORTFOLIO">PORTFOLIO</a></i
+                >
+              </li>
+
+              <li x-on:click="activeTab=3" x-bind:class="{activeTab = 3}" >
+                <i
+                  :class="[activeTab == 3 ? 'text-rose-500' : 'text-navbarLi']"
+                  class="fa-solid fa-briefcase"
+                  ><a href="#">Partners</a></i
+                >
+              </li>
+
+          
+
+             
+
+              <li x-on:click="activeTab=4" x-bind:class="{activeTab = 4}">
+                <i
+                  :class="[activeTab == 4 ? 'text-rose-500' : 'text-navbarLi']"
+                  class="fa-solid fa-comment-dots"
+                  ><a href="#Contact">CONTACT</a></i
+                >
+              </li>
+            </ul>
+            <div x-text="handleScroll"></div>
+          </div>
+          <div  class=" px-4">
+<h2 class="font-bold mb-3">FIND WITH ME</h2>
+            <div class="flex flex-row ">
+              <a href="https://www.instagram.com/niakan_mostafa/" class="transition ease-in-out delay-100  hover:-translate-y-2 
+               duration-150  bg-gradient-to-r  from-white to-shadowColor shadow-4x1  rounded-lg p-5 text-lg
+                hover:text-white cursor-pointer text-slate-400   hover:from-btnColor hover:to-GradientBtn mr-10"> <i class="fa-brands fa-instagram"></i></a>
+              <a href="https://t.me/Mostafaniakan" class="transition ease-in-out delay-100  hover:-translate-y-2 
+               duration-150 bg-gradient-to-r  from-white to-shadowColor shadow-4x1  rounded-lg p-5 text-lg
+                hover:text-white cursor-pointer text-slate-400  hover:from-btnColor hover:to-GradientBtn "> <i class="fa-brands fa-telegram"></i> </a>
+              
+             </div>
+          </div>
+        </header>
+        
+        <div   class="h-screen w-full md:mr-292 container  mx-auto"    >
+
+
+
+          <div class=" w-full h-10 flex flex-row justify-end p-2" >
+            
+            <div class="w-14 h-6 bg-white rounded-full overflow-hidden flex shadow-4x1"
+            :class="[language ? 'justify-end' : 'justify-start']"
+            >
+            
+              <div  class=" w-6 h-6 overflow-hidden rounded-full cursor-pointer   "
+              x-on:click="language = !language"
+              >
+
+  <a href="english.html">
+    <img src="img/iran.png" alt="" class="w-full h-6 "
+  :class="[language ? 'block' : 'hidden']"
+  />
+  </a>
+  <a href="index.html"><img src="img/english.png" alt="" class="w-full h-6 "/></a>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center pt-24 md:h-screen " id="home">
+            <div
+              class="rounded-full relative bg-gradient-to-r from-red-600 to-purple-700 p-2"
+            >
+              <img
+                class="rounded-full h-80 gradient-border"
+                src="img/banner-06.png"
+                alt=""
+              />
+            </div>
+            <div class="mt-5">
+              <h1   class="text-4xl font-bold">Mostafa Niakan</h1>
+              <div class="text-2xl mt-5 flex flex-row-reverse">
+                <h2 class="ml-2">من هستم</h2>
+                <h3 class="cd-headline clip">
+                  <span class="cd-words-wrapper text-btnColor">
+                    <b class="is-visible ">برنامه نویس وب</b>
+                    <b>Front-End  
+                    </b>
+                    
+                  </span>
+                </h3>
+              </div>
+              <div class="mt-8 bg-btnHeader w-fit m-auto transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-105  duration-300">
+                <a href="#Contact"
+                  class="shadow-4x1  py-4 px-9 text-sm font-medium text-btnColor hover:text-white bg-gradient-to-r from-shadowColor to-white hover:from-btnColor hover:to-GradientBtn cursor-pointer rounded duration-700 ease-in-out"
+                >
+                  CONTACT ME
+                </a>
+              </div>
+            </div>
+          </div>
+        <div class="" id="resume">
+          <div class="mt-10  items-center flex flex-col border-t-4" >
+            <div class="mt-5 w-full flex flex-col items-center">
+              <h2 class="text-4xl font-bold">My Resume</h2>
+              <div class="w-full ">
+                <ul class="flex flex-row w-full items-center  justify-evenly">
+                  <li x-on:click="Tabsactive =0"  class="hover:shadow-4x1 lg:w-56 w-40  py-6 lg:px-9 px-5 font-bold lg:text-sm text-0.5   text-black hover:text-btnColor bg-gradient-to-r from-shadowColor to-white   cursor-pointer rounded duration-600 ease-in-out">About Me</li>
+                  <li x-on:click="Tabsactive =1" class="hover:shadow-4x1 lg:w-56 w-40  py-6 lg:px-9 px-5 font-bold lg:text-sm text-0.5   text-black hover:text-btnColor bg-gradient-to-r from-shadowColor to-white   cursor-pointer rounded duration-600 ease-in-out">professional Skills</li>
+                </ul>
+               
+              </div>
+              
+              </div>
+              <div class="grid  lg:grid-cols-2 grid-cols-1 gap-4 w-full mt-10"  x-show="Tabsactive === 0" >
+                <div class="    border-l-4 border-borderColor ">
+                  
+                <div class=" relative w-full p-8 ">
+                  <div  @mouseover="Show =  1 " @mouseout="Show =0"   class="
+                  shadow-4x1 bg-gradient-to-r py-5 mb-4 h-80  hover:text-white  from-shadowColor to-white hover:from-GradientBtn hover:to-btnColor
+                   cursor-pointer rounded">
+                  
+                  <div class="flex flex-row absolute left-0 top- ">
+                      <div 
+                       class="bg-borderColor   w-5 h-5 rounded-full  flex justify-center items-center ">
+                        <div :class="[Show == 1 ? 'bg-btnColor': 'bg-white'  ]" class="bg-white  w-2.5 h-2.5 rounded-full"></div>
+                      </div>
+                      <div class="bg-borderColor  w-3 h-1 rounded mt-2 "></div>
+                    </div>
+
+                    <div  class="p-8  duration-700 ease-in-out  overflow-hidden hover:py-1">
+                      <div class="border-b-2 border-borderColor pb-5">
+                        <i class="fa-solid fa-graduation-cap text-4xl mb-2"></i><h3  class="text-3xl font-semibold  ">High school</h3>
+                      </div>
+                     <div class="mt-3 flex md:flex-row flex-col justify-between ">
+                      <div>
+                        <p class="mb-3 font-extrabold" >High School Name :</p>
+                        <P>Amir Kabir</P>
+                      </div>
+                       <div>
+                        <p class="mb-3 font-extrabold">
+                          Field of study : 
+                         </p>
+                         <P>COMPUTER
+                        </P>
+                       </div>
+                      
+                     </div>
+                      
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class=" relative w-full p-8">
+                  <div  @mouseover="Show =  2" @mouseout="Show = 0"  class="
+                  shadow-4x1 bg-gradient-to-r py-5 mb-4 h-80  hover:text-white  from-shadowColor to-white hover:from-GradientBtn hover:to-btnColor
+                   cursor-pointer rounded">
+                  <div class="flex flex-row absolute left-0 top- ">
+                      <div class="bg-borderColor   w-5 h-5 rounded-full  flex justify-center items-center">
+                        <div  :class="[Show == 2? 'bg-btnColor' : 'bg-white'  ]" class="bg-white  w-2.5 h-2.5 rounded-full"></div>
+                      </div>
+                      <div class="bg-borderColor  w-3 h-1 rounded mt-2 "></div>
+                    </div>
+                  </div>
+                </div>
+
+
+                </div>
+
+
+
+
+
+                <div class="border-l-4 relative border-borderColor ">
+                  <div class=" relative w-full p-8 ">
+                    <div @mouseover="Show =  3 " @mouseout="Show =0"   class="
+                    shadow-4x1 bg-gradient-to-r py-5 mb-4 h-80  hover:text-white  from-shadowColor to-white hover:from-GradientBtn hover:to-btnColor
+                    cursor-pointer rounded">
+                    
+                    <div class="flex flex-row absolute left-0 top- ">
+                        <div 
+                         class="bg-borderColor   w-5 h-5 rounded-full  flex justify-center items-center ">
+                          <div :class="[Show == 3 ? 'bg-btnColor': 'bg-white'  ]" class="bg-white  w-2.5 h-2.5 rounded-full"></div>
+                        </div>
+                        <div class="bg-borderColor  w-3 h-1 rounded mt-2 "></div>
+                      </div>
+  
+                      <div  class="p-8 duration-700 ease-in-out  overflow-hidden hover:py-1">
+                        <div class="border-b-2 border-borderColor pb-5">
+                          <i class="fa-solid fa-building-columns text-4xl mb-2"> </i><h3  class="text-3xl font-semibold   ">University</h3>
+                        </div>
+                       <div class="mt-3 flex md:flex-row flex-col justify-between">
+                        <div>
+                          <p class="mb-3 font-extrabold">University Name :</p>
+                          <P>Semnan Technical</P>
+                        </div>
+                       <div class="mb-3">
+                        <p class="mb-3 font-extrabold ">
+                          Field of study : 
+                         </p>
+                         <P>software engineer
+  
+                        </P>
+                        
+                       </div>
+                     
+                       </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div class=" relative w-full p-8">
+                    <div  @mouseover="Show =  4" @mouseout="Show = 0"  class="
+                   shadow-4x1 bg-gradient-to-r py-5 mb-4 h-80  hover:text-white  from-shadowColor to-white hover:from-GradientBtn hover:to-btnColor
+                   cursor-pointer rounded">
+                    <div class="flex flex-row absolute left-0 top- ">
+                        <div class="bg-borderColor   w-5 h-5 rounded-full  flex justify-center items-center">
+                          <div  :class="[Show == 4 ? 'bg-btnColor' : 'bg-white'  ]" class="bg-white  w-2.5 h-2.5 rounded-full"></div>
+                        </div>
+                        <div class="bg-borderColor  w-3 h-1 rounded mt-2 "></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid  lg:grid-cols-2 grid-cols-1 gap-4 w-full my-2 pb-10 "  x-show="Tabsactive === 1" >
+
+
+                <div class="p-3 mt-6">
+                  <div >
+                    <span class="text-btnColor text-sm">Features</span>
+                    <h2 class="text-3xl font-bold">Development Skill</h2>
+                  </div>
+                  <div class="h-80 mt-5  border-borderColor">
+                    <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">HTML</span>
+                        <span class="  mt-2">85%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 85%"></div>
+                      </div>
+                     </div>
+                     
+                     <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">CSS</span>
+                        <span class="  mt-2">85%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 85%"></div>
+                      </div>
+                     </div>
+
+
+
+                    <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">Tailwind</span>
+                        <span class="  mt-2">85%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 85%"></div>
+                      </div>
+                     </div>
+
+
+
+
+                     <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">JavaScript Es6</span>
+                        <span class="  mt-2">60%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 60%"></div>
+                      </div>
+                     </div>
+
+                     <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">Alpine.js</span>
+                        <span class="  mt-2">70%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 70%"></div>
+                      </div>
+                     </div>
+                     <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">React.js </span>
+                        <span class="  mt-2">30%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 30%"></div>
+                      </div>
+                     </div>
+                  </div>
+                </div>
+
+
+                <div class="p-3 mt-6"  >
+                  <div>
+                    <span class="text-btnColor text-sm">Features</span>
+                    <h2 class="text-3xl font-bold">Design Skill</h2>
+                  </div>
+                  <div class="h-80 mt-5  border-borderColor">
+                    <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">PHOTOSHOT</span>
+                        <span class="  mt-2">30%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 30%"></div>
+                      </div>
+                     </div>
+                     <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">ADOBE XD</span>
+                        <span class="  mt-2">25%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 50%"></div>
+                      </div>
+                     </div>
+                     <div class="mb-5 text-Progress font-medium">
+                      <div class="flex justify-between mb-1 text-sm">
+                        <span class="  mb-1">DESIGN </span>
+                        <span class="  mt-2">5%</span>
+                      </div>
+                      <div class="w-full bg-gray-300 rounded-full h-3 dark:bg-gray-700 p-0.5  ">
+                        <div class="bg-gradient-to-r  from-white to-GradientBtn h-full rounded-full" style="width: 5%"></div>
+                      </div>
+                     </div>
+                  </div>
+                </div>
+
+            </div>
+
+            
+              
+              
+              
+            </div>
+
+            
+
+
+           
+        </div>
+        <div class=" items-center flex flex-col border-t-4 p-8" id="PORTFOLIO">
+        
+<div class="mt-5 w-full flex flex-col items-center"  @scroll.window.throttle="handleScroll =false">
+  <span class="text-btnColor">VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK</span>
+  <h2 class="text-4xl font-bold">My Portfolio</h2>
+</div>
+<div class="grid  lg:grid-cols-3 grid-cols-1 gap-4 w-full mt-10">
+<div class=" w-full lg:h-96  shadow-4x1  p-6">
+  <div class="overflow-hidden rounded  cursor-pointer"><img class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300" src="img/portfolio-01.jpg" alt=""></div>
+  <div class="my-3 text-sm">
+    <span class="text-btnColor">DEVELOPMENT</span>
+  </div>
+  <div >
+  <h4  x-on:click="moda = !moda" class="text-2xl hover:text-btnColor cursor-pointer font-bold arrow">
+    <a >The services provide for design
+      <i class="fa-solid fa-arrow-trend-up "></i>
+    </a>
+  </h4>
+    
+    
+   
+  </div>
+</div>
+
+
+<div class=" w-full lg:h-96  shadow-4x1  p-6">
+  <div class="overflow-hidden rounded  cursor-pointer"><img class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300" src="img/portfolio-01.jpg" alt=""></div>
+  <div class="my-3 text-sm">
+    <span class="text-btnColor">DEVELOPMENT</span>
+  </div>
+  <div >
+  <h4  x-on:click="moda = !moda" class="text-2xl hover:text-btnColor cursor-pointer font-bold arrow">
+    <a >The services provide for design
+      <i class="fa-solid fa-arrow-trend-up "></i>
+    </a>
+  </h4>
+    
+    
+   
+  </div>
+</div>
+
+
+
+
+
+<div class=" w-full lg:h-96  shadow-4x1  p-6" >
+  <div class="overflow-hidden rounded  cursor-pointer"><img class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300" src="img/portfolio-01.jpg" alt=""></div>
+  <div class="my-3 text-sm">
+    <span class="text-btnColor">DEVELOPMENT</span>
+  </div>
+  <div >
+  <h4  x-on:click="moda = !moda" class="text-2xl hover:text-btnColor cursor-pointer font-bold arrow">
+    <a >The services provide for design
+      <i class="fa-solid fa-arrow-trend-up "></i>
+    </a>
+  </h4>
+    
+    
+   
+  </div>
+</div>
+
+</div>
+        </div>
+
+        <div class="w-full  p-2 " id="Contact">
+
+<div class="text-center" >
+  <span class="my-5 text-btnColor">CONTACT</span>
+  <h2 class="text-6xl font-bold text-texttop">Contact With Me</h2>
+</div>
+<div class="grid grid-rows-1 lg:grid-cols-2 gap-8 mt-10 ">
+  <div class=" h-full flex flex-col  bg-gradient-to-r  from-white to-shadowColor shadow-4x1  rounded-lg">
+<div class="   p-10">
+  <div class="overflow-hidden ">
+    <img class="w-full h-full rounded-lg transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 cursor-pointer 
+    duration-300" src="img/contact1.png" alt="">
+  </div>
+  <div class="mt-10">
+    <h2 class="text-3xl font-bold text-black">Nevine Acotanza</h2>
+    <h3 class="my-5 text-lg">Chief Operating Officer</h3>
+    <span class="">I am available for freelance work. Connect with me via and call in to my account.</span>
+   <div class="my-5">
+    <div class="my-3" >
+      <span> Number : </span>
+      <a href="tel:09035441578" class="font-display    leading-tight hover:text-btnColor">
+        <span class="link link-underline link-underline-black "> 09035441578 </span>
+        </a>
+    </div>
+    <div>
+      <span> Gmail : </span>
+      <a href="mailto:mostafaniakan96@gmail.com" class="font-display    leading-tight hover:text-btnColor">
+        <span class="link link-underline link-underline-black "> mostafaniakan96@gmail.com </span> </a>
+    </div>
+
+   </div>
+
+   <div class="flex flex-row ">
+    <a href="https://www.instagram.com/niakan_mostafa/" class="transition ease-in-out delay-100  hover:-translate-y-2 
+     duration-150  bg-gradient-to-r  from-white to-shadowColor shadow-4x1  rounded-lg p-5 text-lg
+      hover:text-white cursor-pointer   hover:from-btnColor hover:to-GradientBtn mr-10"> <i class="fa-brands fa-instagram"></i></a>
+    <a href="https://t.me/Mostafaniakan" class="transition ease-in-out delay-100  hover:-translate-y-2 
+     duration-150 bg-gradient-to-r  from-white to-shadowColor shadow-4x1  rounded-lg p-5 text-lg
+      hover:text-white cursor-pointer   hover:from-btnColor hover:to-GradientBtn "> <i class="fa-brands fa-telegram"></i> </a>
+    
+   </div>
+  </div>
+  
+</div>
+<div></div>
+  </div>
+  <div class=" bg-gradient-to-r p-8 lg:mr-5 from-slate-300 to-shadowColor shadow-4x1 rounded-lg">
+   <form>
+    <div class="flex md:flex-row flex-col justify-between ">
+      <div class="">
+        <label class="text-slate-600 after:content-['*'] after:ml-0.5 after:text-red-500" for="fname">YOUR NAME:</label><br>
+        <input class=" my-3   rounded  shadow-sm  h-14 w-full 
+        focus:outline-none  focus:ring-2 px-3 text-sm focus:ring-btnColor" type="text"/>
+       </div>
+       
+       <div class="">
+        <label class="text-slate-600 after:content-['*'] after:ml-0.5 after:text-red-500" for="phone">PHONE NUMBER:</label><br>
+        <input class=" my-3  rounded-md text-sm shadow-sm w-full  h-14
+        focus:outline-none focus:ring-btnColor focus:ring-2 px-3  "  type="tel">
+        
+       </div>
+    </div>
+   <div>
+    
+      <label class="text-slate-600 after:content-['*'] after:ml-0.5 after:text-red-500" for="Email">Email:</label>
+      <input type="email" class="peer  my-3  rounded-md text-sm shadow-sm w-full  h-14
+      focus:outline-none focus:ring-btnColor focus:ring-2 px-3 "/>
+      <p class=" invisible peer-invalid:visible text-pink-600 text-sm">
+        Please provide a valid email address.
+      </p>
+    </label>
+    
+
+
+    <label class="text-slate-600 after:content-['*'] after:ml-0.5 after:text-red-500" for="SUBJECT">SUBJECT:</label><br>
+    <input class=" my-3  rounded-md text-sm shadow-sm w-full  h-14
+    focus:outline-none focus:ring-btnColor focus:ring-2 px-3  "  type="text">
+
+
+
+
+
+    <label class="text-slate-600 after:content-['*'] after:ml-0.5 after:text-red-500" for="MESSAGE">YOUR MESSAGE:</label><br>
+    <textarea class=" my-3 p-3 rounded-md text-sm shadow-sm w-full  h-44
+    focus:outline-none focus:ring-btnColor focus:ring-2 px-3 resize-none  " ></textarea>
+   </div>
+
+   <button class="w-full h-14 btn-Send bg-gradient-to-r text-btnColor hover:text-white from-white to-shadowColor  rounded-lg text-lg
+     cursor-pointer   hover:from-btnColor hover:to-GradientBtn "> 
+      SEND MESSAGE
+      <i class="fa-solid fa-arrow-trend-up "></i>
+  </button>
+   </form>
+   
+  </div>
+</div>
+
+
+
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="lg:w-screen  w-full h-full lg:h-screen flex justify-center items-center fixed z-20 bg-main  lg:p-32"
+    :class="[moda ?  'block' : 'hidden']"
+    >
+      <div class=" rounded-lg  bg-gradient-to-r  shadow-4x1   from-shadowColor to-white">
+  <div class="w-full p-2 flex justify-end lg:h-10">
+    <div x-on:click="moda = !moda" class="bg-slate-200   w-10 h-10 text-center p-1 shadow-4x1 cursor-pointer text-btnColor transition ease-in-out delay-75 hover:bg-btnColor hover:text-white   rounded-full">
+      <i class="fa-solid fa-xmark text-2xl "></i>
+    </div>
+  </div>
+  <div class="flex flex-col lg:flex-row p-5 mt-3 lg:mt-6 ">
+    <div class="bg-red-600 overflow-hidden rounded-lg  w-full h-44 lg:h-full  mb-8">
+  <img src="img/portfolio-04.jpg" alt="" class=" w-full h-full">
+    </div>
+    <div class=" lg:px-16 w-full  font-medium">
+  <div class=" mb-6">
+    <span >Featured - Design</span>
+    <h2 class="lg:text-3xl text-xs mb-2 lg:mb-6 font-bold text-black mt-5">App Design Development.</h2>
+    <p class="mb-8 text-xs lg:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+       Cupiditate distinctio assumenda explicabo veniam temporibus eligendi.</p>
+       <p class=" text-xs lg:text-lg">Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit 
+         rerum maiores aliquam earum odit, 
+         nihil culpa quas iusto hic minus!</p>
+  </div>
+  <div>
+    <button class="bg-gradient-to-r  shadow-4x1 rounded-lg font-bold 
+    text-btnColor hover:text-white 
+    from-shadowColor to-white hover:from-btnColor hover:to-red-700 px-10 py-3
+    
+    ">
+    Like This
+    <i  class="fa-regular fa-thumbs-up ml-3  "></i></button>
+  </div>
+    </div>
+  </div>
+      </div>
+    </div>
+    <script src="./js/jquery-2.1.1.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
