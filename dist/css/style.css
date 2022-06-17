@@ -1,4 +1,21 @@
-
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  src: url("../font/iranyekanwebbold\(fanum\).woff");
+  font-weight: bold;
+}
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  src: url("../font/iranyekanwebregular\(fanum\).woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  src: url("../font/iranyekanweblight\(fanum\).woff");
+  font-weight: 100;
+}
 
 .cd-words-wrapper {
   display: inline-block;

@@ -542,10 +542,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: auto;
 }
 
-.m-10 {
-  margin: 2.5rem;
-}
-
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -635,32 +631,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0.75rem;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
-.mr-32 {
-  margin-right: 8rem;
-}
-
-.mr-12 {
-  margin-right: 3rem;
-}
-
-.mr-1 {
-  margin-right: 0.25rem;
-}
-
-.mr-20 {
-  margin-right: 5rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
 .mr-24 {
   margin-right: 6rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
 }
 
 .ml-10 {
@@ -777,18 +753,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 2.5rem;
 }
 
-.w-7 {
-  width: 1.75rem;
-}
-
-.w-44 {
-  width: 11rem;
-}
-
-.w-52 {
-  width: 13rem;
-}
-
 .cursor-pointer {
   cursor: pointer;
 }
@@ -835,10 +799,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-between {
   justify-content: space-between;
-}
-
-.justify-around {
-  justify-content: space-around;
 }
 
 .justify-evenly {
@@ -1062,10 +1022,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
-.text-right {
-  text-align: right;
-}
-
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1105,6 +1061,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1119,6 +1080,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-extrabold {
   font-weight: 800;
+}
+
+.font-black {
+  font-weight: 900;
 }
 
 .leading-tight {
@@ -1218,16 +1183,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.before\:mr-0\.5::before {
-  content: var(--tw-content);
-  margin-right: 0.125rem;
-}
-
-.before\:mr-0::before {
-  content: var(--tw-content);
-  margin-right: 0px;
-}
-
 .before\:ml-0\.5::before {
   content: var(--tw-content);
   margin-left: 0.125rem;
@@ -1236,6 +1191,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .before\:ml-0::before {
   content: var(--tw-content);
   margin-left: 0px;
+}
+
+.before\:mr-0\.5::before {
+  content: var(--tw-content);
+  margin-right: 0.125rem;
+}
+
+.before\:mr-0::before {
+  content: var(--tw-content);
+  margin-right: 0px;
 }
 
 .before\:text-red-500::before {
@@ -1249,16 +1214,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   content: var(--tw-content);
 }
 
-.after\:m-0\.5::after {
-  content: var(--tw-content);
-  margin: 0.125rem;
-}
-
-.after\:m-0::after {
-  content: var(--tw-content);
-  margin: 0px;
-}
-
 .after\:ml-0\.5::after {
   content: var(--tw-content);
   margin-left: 0.125rem;
@@ -1267,16 +1222,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .after\:ml-0::after {
   content: var(--tw-content);
   margin-left: 0px;
-}
-
-.after\:mr-0\.5::after {
-  content: var(--tw-content);
-  margin-right: 0.125rem;
-}
-
-.after\:mr-0::after {
-  content: var(--tw-content);
-  margin-right: 0px;
 }
 
 .after\:text-red-500::after {
